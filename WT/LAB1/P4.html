@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4</title>
+</head>
+
+<body>
+    <script >
+        const num = parseInt(prompt("Enter term of fibonacci series:"));
+        let c = 0;
+        let d = 1;
+
+        document.writeln("Fibonacci Series:");
+        for (let i = 0; i < num; i++) {
+            document.writeln(",",c);
+            let next = c + d;
+            c = d;
+            d = next;
+        }
+    </script>
+
+</body>
+
+</html>

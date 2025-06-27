@@ -1,0 +1,25 @@
+<!-- 5. Write a JavaScript that uses a loop that searches a word in sentence held in an array, returning the index of the word.  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5</title>
+ </head>
+ <body>
+    <script type="text/javascript">
+        let sentence = ['hello', 'hii', 'bye', 'how are you?','setting', 'maal', 'patakha', 'rupsundari','laal pari'];
+        let word = prompt("Enter the word :");
+
+        let index = -1;
+        for(i = 0; i < sentence.length ; i++){
+            if(sentence[i] == word){
+                index = i;
+                break;
+            }
+        }
+      document.write(index);
+    </script>
+    
+ </body>
+ </html>

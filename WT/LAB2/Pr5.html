@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr5</title>
+</head>
+
+<body>
+    <script>
+        num = parseInt(prompt("Enter the number :"));
+
+        if (num >= 10 && num <= 99) {
+            let firstDigit = Math.floor(num / 10);
+            let secondDigit = num % 10; 
+
+            let result = Math.pow(firstDigit, secondDigit); 
+
+            document.write(result);
+        } else {
+            document.write("Please provide a valid two-digit number.");
+        }
+    </script>
+</body>
+
+</html>

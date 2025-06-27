@@ -1,0 +1,142 @@
+ <!-- 1. WAP to create a basic graphical Calculator using HTML and JavaScript. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(1235deg, #d66dd1, #f9a976);
+    }
+
+    .calculator {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+    }
+
+    .calculator::before {
+      content: 'Dhaval';
+      position: absolute;
+      left: -60px;
+      top: 75%;
+      transform: rotate(-90deg);
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+    }
+
+    .display {
+      margin-bottom: 20px;
+    }
+
+    .display input {
+      width: 100%;
+      text-align: right;
+      font-size: 28px;
+      border: none;
+      background: transparent;
+      color: white;
+      outline: none;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .btnequal {
+      grid-column: span 2;
+      background: rgba(255, 255, 255, 0.3);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="display" readonly>
+    </div>
+
+    <div class="buttons">
+      <button onclick="allclear()">C</button>
+      <button onclick="backspace()">←</button>
+      <button onclick="display('%')">%</button>
+      <button onclick="display('/')">/</button>
+
+      <button onclick="display('7')">7</button>
+      <button onclick="display('8')">8</button>
+      <button onclick="display('9')">9</button>
+      <button onclick="display('*')">*</button>
+
+      <button onclick="display('4')">4</button>
+      <button onclick="display('5')">5</button>
+      <button onclick="display('6')">6</button>
+      <button onclick="display('-')">-</button>
+
+      <button onclick="display('1')">1</button>
+      <button onclick="display('2')">2</button>
+      <button onclick="display('3')">3</button>
+      <button onclick="display('+')">+</button>
+
+      <button onclick="display('0')">0</button>
+      <button onclick="display('.')">.</button>
+      <button class="btnequal" onclick="equal()">=</button>
+    </div>
+  </div>
+
+  <script>
+    const a = document.getElementById("display");
+
+    function display(value) {
+      a.value += value;
+    }
+
+    function backspace() {
+      a.value = a.value.slice(0, -1);
+    }
+
+    function allclear() {
+      a.value = "";
+    }
+
+    function equal() {
+    a.value = eval(a.value);
+    }
+  </script>
+</body>
+</html>

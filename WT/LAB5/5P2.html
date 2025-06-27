@@ -1,0 +1,159 @@
+ <!-- 2. WAP to create a static login page using HTML and JavaScript. (B) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: cursive;
+      background-color: darksalmon;
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .App {
+      width: 100%;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border: 5px solid black;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .welcomePage {
+      color: pink;
+      font-size: 22px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .login {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 35px;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .forgotpassword {
+      font-size: 14px;
+      text-align: right;
+      margin-bottom: 15px;
+    }
+
+    .submit {
+      width: 100%;
+      height: 40px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 500px) {
+      .App {
+        padding: 20px;
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .welcomePage {
+        font-size: 18px;
+      }
+
+      .login {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+   <form onsubmit="check(event)">
+      <div class="App">
+
+        <div class="welcomePage">
+          <i>Welcome</i>
+        </div>
+
+        <div class="login">
+          <b>Login</b>
+        </div>
+
+        <label for="email" class="form-label">Enter your login credentials</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email" required>
+
+        <input type="password" name="password" class="form-control" placeholder="Enter your Password" required>
+
+        <div class="forgotpassword">Forgot your Password?</div>
+
+      
+        <br><br>
+
+        <button type="submit" class="submit" onclick="check()">Login</button>
+      </div>
+    </form>
+  </div>
+
+<script type="text/JavaScript">
+  function check(event) {
+  event.preventDefault(); // Stop the form from submitting
+
+  email = document.getElementsByName("email")[0].value;
+   password = document.getElementsByName("password")[0].value;
+
+  if (email === "vaghdhaval2530@gmail.com" && password === "dhaval") {
+    alert("You're Login Successfully...");
+  } else {
+    alert("tamaro password khoto chhe farithi try karo....");
+  }
+}
+</script>
+
+
+</body>
+</html>

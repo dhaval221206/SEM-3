@@ -1,0 +1,31 @@
+ <!-- WAP to recognize which mouse event is ƒired. ( -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2</title>
+</head>
+<body>
+    <button onmouseenter="changecolor()" onmouseleave="changecolor1()" id="mouseenter">Enter</button>
+    <button onmouseleave="changecolor2()" id="mouseleave">Leave</button>
+    
+    <script>
+        function changecolor(){
+        ref = document.getElementById("mouseenter");
+            document.body.style.backgroundColor = "green";
+        }
+
+        function changecolor1(){
+        ref = document.getElementById("mouseleave");
+            document.body.style.backgroundColor = "white";
+        }
+
+        function changecolor2(){
+        ref = document.getElementById("mouseleave");
+            document.body.style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>

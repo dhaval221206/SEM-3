@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="validate(event)">
+        <p>
+            <label>username</label>
+            <input type="text" id="username">
+        </p>
+        <p>
+            <label>password</label>
+            <input type="password" id="password">
+        </p>
+        <p>
+            <label> confirm password</label>
+            <input type="password" id="cpassword">
+        </p>
+        <p>
+            <label>email</label>
+            <input type="email" id="email">
+        </p>
+        <p>
+            <button id="submit">SUBMIT</button>
+        </p>
+    </form>
+    <script>
+
+        function validate(event) {
+            event.preventDefault;
+            a = document.getElementById(username).value;
+
+            pattern1 = "^[a-zA-Z_.]{8,}$"
+            pattern2 = "^(?=.)(?=.[!@#$%^&]))[a-zA-Z!@#$%^&]{8,12}$";
+            // pattern3 = "^(?=.)(?=.[!@#$%^&]))[a-zA-Z!@#$%^&]{8,12}$";
+            pattern4 = "[a-zA-Z0-9_.%+-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,}$";
+
+            regx1 = new RegExp(pattern1);
+            if (!regx1.test(a)) {
+                alert("Not validate")
+            } else {
+                alert("Valid")
+            }
+
+            b = document.getElementById(password).value;
+            regx2 = new RegExp(pattern2);
+            if (!regx2.test(b)) {
+                alert("Not validate")
+            } else {
+                alert("Valid")
+            }
+
+            c = document.getElementById(cpassword).value;
+            if (!regx2.test(b)) {
+                if (b == c) {
+                    alert("Not validate")
+                } else {
+                    alert("Valid")
+                }
+            }
+
+            d = document.getElementById(email).value;
+            regx4 = new RegExp(pattern4);
+            if (!regx4.test(d)) {
+                alert("Not validate")
+            } else {
+                alert("Valid")
+            }
+        }
+    </script>
+</body>
+
+</html>

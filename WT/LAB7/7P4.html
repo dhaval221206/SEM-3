@@ -1,0 +1,34 @@
+<!-- 4. Demonstrate the spread operator. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7P4</title>
+</head>
+
+<body>
+    <script>
+        const vehicle = {
+            brand: 'Ford',
+            model: 'Mustang',
+            color: 'red'
+    }
+    const updateVehicle = {
+            brand: 'BMW',
+            model: 'M4 Competition',
+            color: 'Black'
+    }
+
+    const MyupdateVehicle = {...updateVehicle};
+    const myupdateVehicle = {...vehicle};
+    console.log(MyupdateVehicle);
+    console.log(myupdateVehicle);
+
+    </script>
+
+</body>
+
+</html>
